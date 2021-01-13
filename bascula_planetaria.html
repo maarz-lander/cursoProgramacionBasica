@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bascula Planetaria</title>
+</head>
+<body>
+    <h1>
+        TU PESO EN OTRO LUGAR DEL UNIVERSO
+    </h1>
+    <p>
+        Depende de en que sitio, tu peso es distinto.
+    </p>
+    <script> 
+        var g_tierra = 9.807;
+        var g_sol = 274;
+        var g_luna = 1.62;
+        var g_mercurio = 3.7;
+        var g_venus = 8.87;
+        var g_marte = 3.71;
+        
+        alert("Bienvenido a la Bascula Interestelar");
+
+        var planeta;
+        planeta = parseInt(prompt("Elige tu planeta:\n\n1=Sol / 2=Luna / 3=Mercurio / 4=Venus / 5=Marte\n "));
+        
+        var peso;
+        peso = parseInt(prompt("Cual es tu peso?"));
+    
+        var peso_calculado;
+        if(planeta == 1)
+        {
+            peso_calculado = peso * g_sol / g_tierra;
+            peso_calculado_nd = peso_calculado.toFixed(2);
+            document.write("Tu peso en el Sol es " + peso_calculado_nd + " kilos.");
+        }
+        else if(planeta == 2)
+        {
+            peso_calculado = peso * g_luna / g_tierra;
+            peso_calculado_nd = peso_calculado.toFixed(2);
+            document.write("Tu peso en la Luna es " + peso_calculado_nd + " kilos.");
+        }
+        else if(planeta == 3)
+        {
+            peso_calculado = peso * g_mercurio / g_tierra;
+            peso_calculado_nd = peso_calculado.toFixed(2);
+            document.write("Tu peso en Mercurio es " + peso_calculado_nd + " kilos.");
+        }
+        else if(planeta == 4)
+        {
+            peso_calculado = peso * g_venus / g_tierra;
+            peso_calculado_nd = peso_calculado.toFixed(2);
+            document.write("Tu peso en Venus es " + peso_calculado_nd + " kilos.");
+        }
+        else if(planeta == 5)
+        {
+            peso_calculado = peso * g_marte / g_tierra;
+            peso_calculado_nd = peso_calculado.toFixed(2);
+            document.write("Tu peso en Marte es " + peso_calculado_nd + " kilos.");
+        }
+        else 
+        {
+           peso_calculado_nd = 10000000000;
+           document.write("Por pendejo tu peso es de " + peso_calculado_nd + " kilos. Eres un pesao tio!"); 
+        }
+    </script>
+</body>
+</html>
